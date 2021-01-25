@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+// Variables
+$fontDark: rgb(45, 45, 45);
+$backgroundLight: rgb(230, 230, 230);
+$fontLight: rgb(230, 230, 230);
+$backgroundDark: rgb(45, 45, 45);
+$highlightText: rgba(24, 206, 166, 1);
+$bodyFontSize: 1rem;
+$h1: 2rem;
+$h2: 1.5rem;
+$h3: 1.2rem;
+$font: 'Rubik', sans-serif;
+$smoothTransition: background 0.2s ease;
+$borderStyle: 2px solid rgb(220, 20, 60);
+
+// Mixins
+@mixin flexRow {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+@mixin flexColumn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+// Default styling for elements
+* {
+	box-sizing: border-box;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: $fontLight;
+}
+
+h1 {
+	font-size: $h1;
+}
+
+h2 {
+	font-size: $h2;
+}
+
+// Custom styling for elements
+body {
+	width: 100%;
+	min-height: 100vh;
+	color: $fontLight;
+	font-family: $font;
+	font-size: $bodyFontSize;
+}
+
+// Nav styling
+nav {
+	background: $backgroundDark;
+	color: $fontLight;
+	padding: 0.5rem 3rem;
+	width: 100%;
+	height: auto;
+	@include flexRow();
+	position: relative;
+}
+
+// Logo styling
+.logo__container {
+	// background: rgba(255, 255, 0, 1);
+	margin: 0.5rem;
+}
+
+.logo {
+	// background: red;
+	font-size: $h2;
+}
+
+// Nav items styling
+nav ul {
+	// background: crimson;
+	width: auto;
+	@include flexRow();
+	text-transform: uppercase;
+}
+
+nav ul li {
+	// background: khaki;
+	list-style-type: none;
+	@include flexRow();
+}
+
+nav ul li a {
+	// background: rebeccapurple;
+	padding: 0.5rem 1rem;
+	transition: $smoothTransition;
+	// border: 1px solid transparent;
+}
+
+nav ul li a:hover {
+	// border: $borderStyle;
+	background: crimson;
+}
+
+// Header styling
+header {
+	position: relative;
+	background: $backgroundLight;
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: 2rem;
+}
+
+// Title container style
+.title__container {
+	color: $fontDark;
+	margin: 1rem;
+
+}
+
+// Highlighted text styling
+.highlight__text {
+	color: $highlightText;
+	border-bottom: 4px solid $highlightText;
+}
+
+// Section styling
+section {
+	position: relative;
+	background: $backgroundDark;
+	width: 100%;
+	min-height: 80vh;
+}
+
+// Footer styling
+footer {
+	position: relative;
+	bottom: 0;
+	background: $backgroundLight;
+	width: 100%;
+	min-height: 20vh;
+}

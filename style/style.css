@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #e6e6e6;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: #e6e6e6;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+}
+
+nav {
+  background: #2d2d2d;
+  color: #e6e6e6;
+  padding: 0.5rem 3rem;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.logo__container {
+  margin: 0.5rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav ul li a {
+  padding: 0.5rem 1rem;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+}
+
+nav ul li a:hover {
+  background: crimson;
+}
+
+header {
+  position: relative;
+  background: #e6e6e6;
+  width: 100%;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 2rem;
+}
+
+.title__container {
+  color: #2d2d2d;
+  margin: 1rem;
+}
+
+.highlight__text {
+  color: #18cea6;
+  border-bottom: 4px solid #18cea6;
+}
+
+section {
+  position: relative;
+  background: #2d2d2d;
+  width: 100%;
+  min-height: 80vh;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  background: #e6e6e6;
+  width: 100%;
+  min-height: 20vh;
+}
+/*# sourceMappingURL=style.css.map */
