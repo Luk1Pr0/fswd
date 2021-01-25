@@ -7,12 +7,12 @@ $fontLight: rgb(230, 230, 230);
 $backgroundDark: rgb(45, 45, 45);
 $highlightText: rgba(24, 206, 166, 1);
 $bodyFontSize: 1rem;
-$h1: 2rem;
-$h2: 1.5rem;
-$h3: 1.2rem;
+$h1: 2.5rem;
+$h2: 2rem;
+$h3: 1.5rem;
+$h4: 1.3rem;
 $font: 'Rubik', sans-serif;
-$smoothTransition: background 0.2s ease;
-$borderStyle: 2px solid rgb(220, 20, 60);
+$smoothTransition: 0.2s ease;
 
 // Mixins
 @mixin flexRow {
@@ -25,7 +25,7 @@ $borderStyle: 2px solid rgb(220, 20, 60);
 @mixin flexColumn {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	flex-wrap: wrap;
 }
@@ -51,13 +51,23 @@ h2 {
 	font-size: $h2;
 }
 
+h3 {
+	font-size: $h3;
+}
+
+h4 {
+	font-size: $h4;
+}
+
 // Custom styling for elements
 body {
 	width: 100%;
 	min-height: 100vh;
+	overflow-x: hidden;
 	color: $fontLight;
 	font-family: $font;
 	font-size: $bodyFontSize;
+	background: $backgroundLight;
 }
 
 // Nav styling
@@ -73,79 +83,237 @@ nav {
 
 // Logo styling
 .logo__container {
-	// background: rgba(255, 255, 0, 1);
 	margin: 0.5rem;
 }
 
 .logo {
-	// background: red;
-	font-size: $h2;
+	font-size: $h3;
 }
 
 // Nav items styling
 nav ul {
-	// background: crimson;
 	width: auto;
 	@include flexRow();
 	text-transform: uppercase;
 }
 
 nav ul li {
-	// background: khaki;
 	list-style-type: none;
 	@include flexRow();
 }
 
 nav ul li a {
-	// background: rebeccapurple;
 	padding: 0.5rem 1rem;
 	transition: $smoothTransition;
-	// border: 1px solid transparent;
 }
 
 nav ul li a:hover {
-	// border: $borderStyle;
-	background: crimson;
+	background: rgba(220, 20, 60, 0.7);
+}
+
+// Burger menu styling
+.burger__container {
+	width: 3rem;
+	height: 3rem;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 3;
+	margin: 10px;
+	@include flexColumn();
+	justify-content: space-around;
+}
+
+.burger__line {
+	background: white;
+	width: 100%;
+	height: 12%;
 }
 
 // Header styling
 header {
 	position: relative;
-	background: $backgroundLight;
+	background: $backgroundDark;
+	background: url('/assets/header.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 100%;
-	height: 80vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	padding: 2rem;
+	height: 85vh;
+	@include flexColumn();
+}
+
+// Dark header overlay styling
+.dark__overlay {
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.8;
 }
 
 // Title container style
-.title__container {
-	color: $fontDark;
+.text__container {
 	margin: 1rem;
-
+	position: absolute;
+	height: 50%;
+	@include flexColumn();
 }
 
-// Highlighted text styling
-.highlight__text {
+// Highlighted title styling
+.highlight__title {
 	color: $highlightText;
 	border-bottom: 4px solid $highlightText;
+}
+
+.header__text {
+	position: relative;
+	left: 0;
+}
+
+.fa-sort-down {
+	position: absolute;
+	bottom: 2rem;
+	font-size: 4rem;
+	color: $fontLight;
+	animation: scroll 2s infinite;
 }
 
 // Section styling
 section {
 	position: relative;
-	background: $backgroundDark;
+	background: $backgroundLight;
 	width: 100%;
 	min-height: 80vh;
+	@include flexColumn();
+	justify-content: center;
+	padding: 4rem 6rem;
+	color: $fontDark;
+}
+
+.section__title {
+	border-bottom: 3px solid $fontDark;
+}
+
+.content__wrapper {
+	@include flexRow();
+}
+
+.text__wrapper {
+	width: 45%;
+}
+
+.img__wrapper {
+	width: 50%;
+	height: auto;
+}
+
+.img__wrapper img {
+	width: 100%;
+	height: 100%;
+	box-shadow: 10px 10px 20px 1px rgba(45, 45, 45, 0.3);
+	border-radius: 2rem;
 }
 
 // Footer styling
 footer {
 	position: relative;
 	bottom: 0;
-	background: $backgroundLight;
+	background: $backgroundDark;
 	width: 100%;
-	min-height: 20vh;
+	padding: 2rem 0;
+	@include flexRow();
+	justify-content: center;
+}
+
+.footer--left {
+	width: 25%;
+}
+
+.footer--right {
+	width: 25%;
+}
+
+.highlight__text {
+	color: $highlightText;
+}
+
+.highlight__text:hover {
+	border-bottom: 1px solid $highlightText;
+}
+
+// Hidden class to hide elements with JS
+.hidden {
+	display: none;
+}
+
+// Animations
+@keyframes scroll {
+	0% {
+		transform: translateY(-50%);
+	}
+	30% {
+		transform: translateY(0%);
+	}
+	60% {
+		transform: translateY(-50%);
+	}
+	70% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(-50%);
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	// Custom styling for elements
+	body {
+		width: 100%;
+		min-height: 100vh;
+		overflow-x: hidden;
+		color: $fontLight;
+		font-family: $font;
+		font-size: $bodyFontSize;
+		background: $backgroundLight;
+	}
+
+	// Nav styling
+	nav {
+		min-height: 100vh;
+		position: fixed;
+		top: 0;
+		z-index: 10;
+		@include flexColumn();
+		justify-content: center;
+		padding: 0;
+	}
+
+	.logo {
+		color: $highlightText;
+	}
+
+	// Nav items styling
+	nav ul {
+		height: 70%;
+		width: 100%;
+		@include flexColumn();
+		justify-content: center;
+	}
+
+	nav ul li {
+		width: 100%;
+		@include flexRow();
+		justify-content: center;
+	}
+
+	nav ul li a {
+		padding: 2rem 0;
+		width: 100%;
+	}
+
+	.burger__container {
+		@include flexColumn();
+		justify-content: space-around;
+	}
 }
