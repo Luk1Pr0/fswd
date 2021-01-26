@@ -70,6 +70,7 @@ nav {
   transition: 0.3s ease;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  background: transparent;
 }
 
 .nav__hidden {
@@ -88,6 +89,7 @@ nav {
   transition: 0.3s ease;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+  background: #2d2d2d;
 }
 
 .logo__container {
@@ -629,6 +631,7 @@ footer {
         flex-wrap: wrap;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+    background: #2d2d2d;
   }
   .top__nav__wrapper {
     width: 100%;

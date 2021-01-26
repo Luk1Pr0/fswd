@@ -95,7 +95,7 @@ nav {
 	z-index: 2;
 	transition: $smoothTransition;
 	transform: translateY(0);
-
+	background: transparent;
 }
 
 .nav__hidden {
@@ -110,6 +110,7 @@ nav {
 	z-index: 2;
 	transition: $smoothTransition;
 	transform: translateY(0%);
+	background: $backgroundDark;
 }
 
 // Logo styling
@@ -418,6 +419,7 @@ footer {
 	.nav__active {
 		@include flexColumn();
 		transform: translateY(0);
+		background: $backgroundDark;
 	}
 
 	.top__nav__wrapper {
