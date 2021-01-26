@@ -65,6 +65,11 @@ h5 {
 	font-size: $h5;
 }
 
+img {
+	width: auto;
+	height: 100%;
+}
+
 // Custom styling for elements
 body {
 	width: 100%;
@@ -175,14 +180,34 @@ header {
 	border-bottom: 4px solid $highlightText;
 }
 
+.header__container {
+	@include flexRow();
+	justify-content: center;
+}
+
+.header__logo__container {
+	width: 15%;
+	height: auto;
+	margin: 1rem;
+}
+
+.header__logo__container img {
+	height: 100%;
+	width: 100%;
+}
+
 .header__text {
 	position: relative;
 	left: 0;
 }
 
-.fa-sort-down {
+.icon__container {
+	width: 100%;
 	position: absolute;
-	bottom: 2rem;
+	bottom: 1rem;
+}
+
+.fa-sort-down {
 	font-size: 4rem;
 	color: $fontLight;
 	animation: scroll 2s infinite;
@@ -194,7 +219,7 @@ section {
 	position: relative;
 	background: $backgroundLight;
 	width: 100%;
-	min-height: 80vh;
+	min-height: 80%;
 	@include flexColumn();
 	justify-content: center;
 	padding: 4rem 6rem;
@@ -216,22 +241,10 @@ section {
 
 .img__wrapper {
 	width: 50%;
-	height: auto;
 	position: relative;
 	@include flexRow();
 	justify-content: flex-end;
 	align-items: flex-end;
-}
-
-.img__text {
-	position: absolute;
-	background: $opacityOverlay;
-	color: $fontLight;
-	padding: 1rem;
-	margin: 2rem;
-	box-shadow: 1px 1px 20px 1px $opacityOverlay;
-	border-radius: 10px;
-	max-width: 50%;
 }
 
 .img__wrapper img {
@@ -366,6 +379,67 @@ footer {
 	nav ul li a {
 		padding: 2rem 0;
 		width: 100%;
+	}
+	
+	// Header styling
+	header {
+		height: 95vh;
+		background-attachment: scroll;
+	}
+
+	// Title container style
+	.text__container {
+		height: 90%;
+		justify-content: center;
+	}
+
+	.header__container {
+		@include flexColumn();
+	}
+
+	.header__logo__container {
+		height: auto;
+		margin: 2rem;
+		width: 60%;
+	}
+
+	// Section styling
+	section {
+		padding: 1rem;
+	}
+
+	.content__wrapper {
+		width: 100%;
+	}
+
+	.text__wrapper {
+		width: 100%;
+	}
+
+	.img__wrapper {
+		width: 100%;
+		margin: 1rem 0;
+	}
+
+	// Footer styling
+	footer {
+		position: relative;
+		bottom: 0;
+		background: $backgroundDark;
+		width: 100%;
+		padding: 2rem 0;
+		@include flexRow();
+		justify-content: center;
+
+		justify-content: space-around;
+	}
+
+	.footer--left {
+		width: 40%;
+	}
+
+	.footer--right {
+		width: 50%;
 	}
 
 	// Hidden class to hide elements
