@@ -3,7 +3,7 @@ const navMenu = document.getElementById('navMenu');
 const header = document.querySelector('header');
 const section1 = document.querySelector('.section--1');
 
-const mobileScreen = 1023;
+const mobileScreen = 1024;
 
 // Close or open nav menu
 const toggleNav = () => {

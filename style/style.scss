@@ -289,7 +289,8 @@ section {
 }
 
 .card__img__container {
-	height: 50%;
+	height: 20vh;
+	width: 100%;
 	border-radius: 2rem 2rem 0 0;
 }
 
@@ -303,6 +304,7 @@ section {
 .card__title__container {
 	width: 100%;
 	height: auto;
+	height: 30%;
 	@include flexColumn();
 	align-items: center;
 	padding: 1rem;
@@ -312,6 +314,7 @@ section {
 .card__content__container {
 	width: 100%;
 	min-height: 30%;
+	height: 30%;
 	border-radius: 0 0 2rem 2rem;
 	padding: 1rem;
 }
@@ -386,7 +389,7 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
 	// Custom styling for elements
 	body {
 		width: 100%;
@@ -541,6 +544,13 @@ footer {
 		width: 100%;
 		margin: 1rem;
 	}
+
+	.card__img__container {
+		height: 50%;
+		width: 100%;
+		border-radius: 2rem 2rem 0 0;
+	}
+
 
 	// Footer styling
 	footer {
