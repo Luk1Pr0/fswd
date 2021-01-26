@@ -237,7 +237,7 @@ section {
 	position: relative;
 	background: $backgroundLight;
 	width: 100%;
-	min-height: 80%;
+	min-height: 90vh;
 	@include flexColumn();
 	justify-content: center;
 	padding: 6rem;
@@ -245,7 +245,8 @@ section {
 }
 
 .section__title {
-	border-bottom: 3px solid $fontDark;
+	color: $highlightText;
+	border-bottom: 3px solid $highlightText;
 }
 
 .content__wrapper {
@@ -278,7 +279,7 @@ footer {
 	bottom: 0;
 	background: $backgroundDark;
 	width: 100%;
-	padding: 2rem 0;
+	padding: 3rem 0;
 	@include flexRow();
 	justify-content: center;
 }
@@ -363,10 +364,10 @@ footer {
 
 	.logo__container {
 		padding: 0;
-		margin: 10px;
+		margin: 0 1rem;
 		position: unset;
 		width: auto;
-		height: 80%;
+		height: 8rem;
 		text-align: center;
 	}
 
@@ -397,8 +398,8 @@ footer {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		width: 60px;
-		height: 50px;
+		width: 50px;
+		height: 40px;
 		position: fixed;
 		z-index: 10;
 		top: 0;
@@ -468,6 +469,7 @@ footer {
 	// Footer styling
 	footer {
 		justify-content: space-around;
+		padding: 2rem 0;
 	}
 
 	.footer--left {

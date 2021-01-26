@@ -283,7 +283,7 @@ section {
   position: relative;
   background: #e6e6e6;
   width: 100%;
-  min-height: 80%;
+  min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,7 +307,8 @@ section {
 }
 
 .section__title {
-  border-bottom: 3px solid #2d2d2d;
+  color: #0099ff;
+  border-bottom: 3px solid #0099ff;
 }
 
 .content__wrapper {
@@ -364,7 +365,7 @@ footer {
   bottom: 0;
   background: #2d2d2d;
   width: 100%;
-  padding: 2rem 0;
+  padding: 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,10 +520,10 @@ footer {
   }
   .logo__container {
     padding: 0;
-    margin: 10px;
+    margin: 0 1rem;
     position: unset;
     width: auto;
-    height: 80%;
+    height: 8rem;
     text-align: center;
   }
   .nav__list__container {
@@ -583,8 +584,8 @@ footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 60px;
-    height: 50px;
+    width: 50px;
+    height: 40px;
     position: fixed;
     z-index: 10;
     top: 0;
@@ -658,6 +659,7 @@ footer {
   footer {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    padding: 2rem 0;
   }
   .footer--left {
     width: 40%;
