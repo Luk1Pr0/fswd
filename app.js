@@ -13,12 +13,12 @@ const toggleNav = () => {
 
 // Attach the nav menu to the window when user scrolls
 const showNavMenu = () => {
-	// If screen size
+	// If screen size is larger then mobileScreen than run code below
 	if (window.innerWidth > mobileScreen) {
 		const scrollPos = window.pageYOffset;
 		const sectionOffset = section1.getBoundingClientRect().top;
 		const navHeight = navMenu.getBoundingClientRect().height;
-		// If scrolls pos is more than 1px hide navbar
+		// If scroll pos is more than 1px hide navbar
 		if (scrollPos > 1) {
 			navMenu.classList.add('nav__hidden');
 			// Once section offset is less than the navHeight, stick the navbar
