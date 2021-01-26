@@ -504,6 +504,10 @@ footer {
 		@include flexColumn();
 	}
 
+	.header__container--services {
+		margin: 2rem;
+	}
+
 	.header__logo__container {
 		height: auto;
 		margin: 2rem;
@@ -526,6 +530,16 @@ footer {
 	.img__wrapper {
 		width: 100%;
 		margin: 1rem 0;
+	}
+
+	// Styling for services section
+	.section__title {
+		margin-bottom: 1rem;
+	}
+	
+	.card__wrapper {
+		width: 100%;
+		margin: 1rem;
 	}
 
 	// Footer styling
