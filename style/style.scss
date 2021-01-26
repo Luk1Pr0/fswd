@@ -90,7 +90,25 @@ nav {
 	height: auto;
 	@include flexRow();
 	justify-content: space-between;
-	position: relative;
+	position: fixed;
+	z-index: 2;
+	transition: $smoothTransition;
+	transform: translateY(0);
+
+}
+
+.nav__hidden {
+	transform: translateY(-100%);
+	padding: 0 3rem;
+	transition: $smoothTransition;
+}
+
+.nav__sticky {
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	transition: $smoothTransition;
+	transform: translateY(0%);
 }
 
 // Logo styling
@@ -154,7 +172,7 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 85vh;
+	height: 95vh;
 	@include flexColumn();
 }
 
@@ -222,7 +240,7 @@ section {
 	min-height: 80%;
 	@include flexColumn();
 	justify-content: center;
-	padding: 4rem 6rem;
+	padding: 6rem;
 	color: $fontDark;
 }
 
@@ -391,6 +409,7 @@ footer {
 
 	.burger__line {
 		transition: $smoothTransition;
+		background: $highlightText;
 	}
 
 	.burger__cross .line1 {
