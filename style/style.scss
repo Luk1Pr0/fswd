@@ -5,12 +5,14 @@ $fontDark: rgb(45, 45, 45);
 $backgroundLight: rgb(230, 230, 230);
 $fontLight: rgb(230, 230, 230);
 $backgroundDark: rgb(45, 45, 45);
-$highlightText: rgba(24, 206, 166, 1);
+$highlightText: rgba(0, 153, 255, 1);
+$opacityOverlay: rgba(0, 0, 0, 0.9);
 $bodyFontSize: 1rem;
 $h1: 2.5rem;
 $h2: 2rem;
 $h3: 1.5rem;
 $h4: 1.3rem;
+$h5: 1.2rem;
 $font: 'Rubik', sans-serif;
 $smoothTransition: 0.2s ease;
 
@@ -59,10 +61,14 @@ h4 {
 	font-size: $h4;
 }
 
+h5 {
+	font-size: $h5;
+}
+
 // Custom styling for elements
 body {
 	width: 100%;
-	min-height: 100vh;
+	// min-height: 100vh;
 	overflow-x: hidden;
 	color: $fontLight;
 	font-family: $font;
@@ -78,16 +84,38 @@ nav {
 	width: 100%;
 	height: auto;
 	@include flexRow();
+	justify-content: space-between;
 	position: relative;
 }
 
 // Logo styling
 .logo__container {
-	margin: 0.5rem;
+	padding: 5px;
+	width: auto;
+	height: 4rem;
+	position: relative;
+	top: 0;
+	left: 0.5rem;
+	z-index: 2;
+	@include flexRow();
+	justify-content: center;
 }
 
 .logo {
-	font-size: $h3;
+	height: 100%;
+	width: auto;
+	filter: drop-shadow(-10px 10px 3px rgba(0, 0, 0, 0.5))
+}
+
+// Burger menu styling
+.burger__container {
+	display: none;
+}
+
+.burger__line {
+	background: white;
+	width: 100%;
+	height: 20%;
 }
 
 // Nav items styling
@@ -103,31 +131,12 @@ nav ul li {
 }
 
 nav ul li a {
-	padding: 0.5rem 1rem;
+	padding: 1rem;
 	transition: $smoothTransition;
 }
 
 nav ul li a:hover {
 	background: rgba(220, 20, 60, 0.7);
-}
-
-// Burger menu styling
-.burger__container {
-	width: 3rem;
-	height: 3rem;
-	position: fixed;
-	top: 0;
-	right: 0;
-	z-index: 3;
-	margin: 10px;
-	@include flexColumn();
-	justify-content: space-around;
-}
-
-.burger__line {
-	background: white;
-	width: 100%;
-	height: 12%;
 }
 
 // Header styling
@@ -177,6 +186,7 @@ header {
 	font-size: 4rem;
 	color: $fontLight;
 	animation: scroll 2s infinite;
+	color: $highlightText;
 }
 
 // Section styling
@@ -197,6 +207,7 @@ section {
 
 .content__wrapper {
 	@include flexRow();
+	width: 90%;
 }
 
 .text__wrapper {
@@ -206,6 +217,21 @@ section {
 .img__wrapper {
 	width: 50%;
 	height: auto;
+	position: relative;
+	@include flexRow();
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.img__text {
+	position: absolute;
+	background: $opacityOverlay;
+	color: $fontLight;
+	padding: 1rem;
+	margin: 2rem;
+	box-shadow: 1px 1px 20px 1px $opacityOverlay;
+	border-radius: 10px;
+	max-width: 50%;
 }
 
 .img__wrapper img {
@@ -266,11 +292,11 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1023px) {
 	// Custom styling for elements
 	body {
 		width: 100%;
-		min-height: 100vh;
+		height: 100vh;
 		overflow-x: hidden;
 		color: $fontLight;
 		font-family: $font;
@@ -278,33 +304,63 @@ footer {
 		background: $backgroundLight;
 	}
 
-	// Nav styling
 	nav {
-		min-height: 100vh;
+		width: 100%;
+		height: 100vh;
+		@include flexColumn();
+		justify-content: flex-start;
 		position: fixed;
 		top: 0;
+		left: 0;
 		z-index: 10;
-		@include flexColumn();
-		justify-content: center;
 		padding: 0;
 	}
 
-	.logo {
-		color: $highlightText;
+	.top__nav__wrapper {
+		width: 100%;
+		height: 20%;
+		display: flex;
+		justify-content: space-between;
 	}
 
-	// Nav items styling
-	nav ul {
-		height: 70%;
+	.logo__container {
+		padding: 0;
+		margin: 10px;
+		position: unset;
+		width: auto;
+		height: 80%;
+		text-align: center;
+	}
+
+	.burger__container {
+		display: block;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 60px;
+		height: 50px;
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		right: 0;
+		margin: 0.5rem;
+	}
+
+	.nav__list__container {
 		width: 100%;
+		height: 70%;
 		@include flexColumn();
-		justify-content: center;
+		overflow-y: auto;
+	}
+
+	nav ul {
+		width: 100%;
+		height: auto;
+		@include flexColumn();
 	}
 
 	nav ul li {
 		width: 100%;
-		@include flexRow();
-		justify-content: center;
 	}
 
 	nav ul li a {
@@ -312,8 +368,8 @@ footer {
 		width: 100%;
 	}
 
-	.burger__container {
-		@include flexColumn();
-		justify-content: space-around;
+	// Hidden class to hide elements
+	.hidden {
+		display: none;
 	}
 }
