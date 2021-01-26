@@ -12,7 +12,7 @@ const toggleNav = () => {
 }
 
 // Attach the nav menu to the window when user scrolls
-const showNavMenu = (e) => {
+const showNavMenu = () => {
 	// If screen size
 	if (window.innerWidth > mobileScreen) {
 		const scrollPos = window.pageYOffset;
@@ -32,7 +32,6 @@ const showNavMenu = (e) => {
 		}
 	}
 }
-
 
 // Event listeners
 navIcon.addEventListener('click', toggleNav);
