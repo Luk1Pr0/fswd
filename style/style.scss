@@ -71,6 +71,10 @@ img {
 	height: 100%;
 }
 
+button {
+	cursor: pointer;
+}
+
 // Custom styling for elements
 body {
 	width: 100%;
@@ -255,6 +259,7 @@ section {
 	color: $fontDark;
 }
 
+// Services section styling
 .section--services {
 	@include flexColumn();
 }
@@ -320,6 +325,27 @@ section {
 	padding: 1rem;
 }
 
+.contact__button__container {
+	margin-top: 2rem;
+}
+
+.contact__button__container button {
+	outline: none;
+	border: 1px solid $fontDark;
+	padding: 10px 13px;
+	font-family: $font;
+	font-size: $h5;
+	background: transparent;
+	color: $fontDark;
+	transition: $smoothTransition;
+}
+
+.contact__button__container button:hover {
+	background: $backgroundDark;
+	color: $fontLight;
+}
+
+// Home section--1 styling
 .text__wrapper {
 	width: 45%;
 }
@@ -552,7 +578,6 @@ footer {
 		width: 100%;
 		border-radius: 2rem 2rem 0 0;
 	}
-
 
 	// Footer styling
 	footer {

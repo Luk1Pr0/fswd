@@ -37,6 +37,10 @@ img {
   height: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
   width: 100%;
   overflow-x: hidden;
@@ -448,6 +452,27 @@ section {
   height: 30%;
   border-radius: 0 0 2rem 2rem;
   padding: 1rem;
+}
+
+.contact__button__container {
+  margin-top: 2rem;
+}
+
+.contact__button__container button {
+  outline: none;
+  border: 1px solid #2d2d2d;
+  padding: 10px 13px;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.2rem;
+  background: transparent;
+  color: #2d2d2d;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.contact__button__container button:hover {
+  background: #2d2d2d;
+  color: #e6e6e6;
 }
 
 .text__wrapper {
