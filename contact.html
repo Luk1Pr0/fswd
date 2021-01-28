@@ -51,14 +51,12 @@
 
 	<!-- Header container -->
 	<header>
-		<!-- Dark header overlay -->
-		<div class="dark__overlay"></div>
 
 		<!-- Header text container -->
 		<div class="text__container">
 
 			<!-- Header title container -->
-			<div class="header__container">
+			<div class="header__container header__container--contact">
 				<h1 class='highlight__title'>Contact Us</h1>
 			</div>
 
@@ -89,42 +87,61 @@
 	<!-- Section 1 container -->
 	<section class='section--1 section--contact'>
 		<h2 class='section__title'>Get in touch</h2>
-		<br>
-		<br>
-		<!-- Section content wrapper -->
-		<div class="content__wrapper">
-			<!-- Text wrapper -->
-			<div class="text__wrapper">
-				<h5>Make the right statement about your brand with a custom website design. Our beautiful sites offer
-					unique design, fluid movement, with a user-friendly look and feel that will draw in your clients and
-					engage them. Inspire curiosity, heighten trust, and encourage new prospects to contact you by
-					establishing a credible digital presence they will not forget. Our website development team has the
-					programming skills and creative expertise to forge an elegant and converting web presence that
-					showcases your brand while supporting your business.</h5>
-			</div>
 
-			<!-- Section image wrapper -->
-			<div class="img__wrapper">
-				<img src="./assets/home-page/img-1.png" alt="iMac and MacBook on white table">
-			</div>
+		<!-- Social Media icons container -->
+		<div class="social__icons__container">
+
+			<!-- Twitter link and icon -->
+			<a href="https://twitter.com/GuruCodingCo" title='Guru Coding Twitter' target="_blank">
+				<i class="fab fa-twitter-square"></i>
+			</a>
+
+			<!-- Facebook link and icon -->
+			<a href="https://www.facebook.com/Guru-Coding-Company-101417465307382" title='Guru Coding Facebook'
+				target="_blank">
+				<i class="fab fa-facebook-square"></i>
+			</a>
 		</div>
-		<br>
-		<br>
-		<!-- Section content wrapper -->
-		<div class="content__wrapper">
 
-			<!-- Section image wrapper -->
-			<div class="img__wrapper">
-				<img src="./assets/home-page/img-2.png" alt="Cofee and MacBook on a wooden desk">
-			</div>
+		<!-- Contact form container -->
+		<div class="contact__form__container">
 
-			<!-- Text wrapper -->
-			<div class="text__wrapper">
-				<h5>With user expectations at an all-time high, your company needs a digital experience that is
-					intuitive, beautiful, and optimized across web, tablet, and mobile devices. Through a human-centric
-					design methodology, our Frontend development team will deliver creative solutions that will resonate
-					with your target audience while advancing your business objectives.</h5>
-			</div>
+			<!-- Contact form -->
+			<form id="contactForm">
+
+				<!-- Form container top -->
+				<div class="input__container--top">
+
+					<!-- Input container -->
+					<div class="input__container">
+						<label for="nameInput">Name</label>
+						<input type="text" title="Name" id='name' placeholder="e.g. John Doe">
+					</div>
+
+					<!-- Input contianer -->
+					<div class="input__container">
+						<label for="emailInput">Email</label>
+						<input type="email" title='Email' id='emailInput' placeholder="e.g. johndoe@gmail.com">
+					</div>
+
+				</div>
+
+				<div class="input__container--bottom">
+
+					<!-- Input container -->
+					<div class="input__container input__container--message">
+						<label for="msgInput">Your Message</label>
+						<div title='Message' id='msgInput' contenteditable="true">
+						</div>
+					</div>
+				</div>
+
+				<!-- Submit button container -->
+				<div class="form__buttons__container">
+					<button id="submitForm">Submit</button>
+					<button id="clearForm">Clear</button>
+				</div>
+			</form>
 		</div>
 	</section>
 

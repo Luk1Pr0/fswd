@@ -73,6 +73,14 @@ img {
 }
 
 button {
+	outline: none;
+	padding: 10px 13px;
+	border: 1px solid $fontDark;
+	font-family: $font;
+	font-size: $h5;
+	background: transparent;
+	color: $fontDark;
+	transition: $smoothTransition;
 	cursor: pointer;
 }
 
@@ -102,12 +110,14 @@ nav {
 	background: transparent;
 }
 
+// Hide navbar
 .nav__hidden {
 	transform: translateY(-100%);
 	padding: 0 3rem;
 	transition: $smoothTransition;
 }
 
+// Stick navbar to top
 .nav__sticky {
 	position: fixed;
 	top: 0;
@@ -117,7 +127,7 @@ nav {
 	background: $backgroundDark;
 }
 
-// Logo styling
+// Logo container styling
 .logo__container {
 	padding: 5px;
 	width: auto;
@@ -148,6 +158,7 @@ nav ul li {
 	@include flexRow();
 }
 
+// Style the current page nav element
 .page--active {
 	background: $highlightText;
 }
@@ -182,7 +193,7 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 95vh;
+	min-height: 95vh;
 	@include flexColumn();
 	flex-wrap: nowrap;
 }
@@ -192,15 +203,17 @@ header {
 	width: 100%;
 	height: 100%;
 	background: black;
-	opacity: 0.5;
+	opacity: 0.3;
 }
 
 // Title container style
 .text__container {
-	margin: 1rem;
 	position: absolute;
-	height: 50%;
+	height: 100%;
+	width: 100%;
 	@include flexColumn();
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.5);
 }
 
 // Highlighted title styling
@@ -213,6 +226,7 @@ header {
 .header__container {
 	@include flexRow();
 	justify-content: center;
+	margin-bottom: 2rem;
 }
 
 .header__logo__container {
@@ -263,7 +277,7 @@ section {
 	color: $fontDark;
 }
 
-// Home section--1 styling
+// Home section styling
 .text__wrapper {
 	width: 45%;
 }
@@ -354,23 +368,12 @@ section {
 	margin-top: 2rem;
 }
 
-.contact__button__container button {
-	outline: none;
-	border: 1px solid $fontDark;
-	padding: 10px 13px;
-	font-family: $font;
-	font-size: $h5;
-	background: transparent;
-	color: $fontDark;
-	transition: $smoothTransition;
-}
-
 .contact__button__container button:hover {
 	background: $backgroundDark;
 	color: $fontLight;
 }
 
-// Section team styling
+// Team section styling
 .team__members__container {
 	width: 100%;
 	min-height: auto;
@@ -378,6 +381,7 @@ section {
 	justify-content: center;
 }
 
+// Each individual member
 .member__container {
 	width: 30%;
 	min-height: 50vh;
@@ -424,12 +428,136 @@ section {
 	color: $fontDark;
 }
 
+// Member icons style
 .fa-github {
 	color: #3E2C00;
 }
 
 .fa-linkedin {
 	color: #2867B2;
+}
+
+// Contact page styling
+.social__icons__container {
+	width: 50%;
+	height: auto;
+	font-size: 3rem;
+	@include flexRow();
+	justify-content: space-evenly;
+	margin-bottom: 2rem;
+}
+
+.fa-facebook-square {
+	color: rgb(66,103,178);
+}
+
+.fa-twitter-square {
+	color: rgb(29,161,242);
+}
+
+.contact__form__container {
+	width: 100%;
+	height: auto;
+	@include flexRow();
+	justify-content: center;
+	align-items: center;
+}
+
+#contactForm {
+	width: 50%;
+	@include flexColumn();
+	padding: 4rem 6rem;
+	box-sizing: unset;
+	border-radius: 1rem;
+	background: rgba($fontDark, 0.9);
+	box-shadow: 0 10px 10px 1px $boxShadowColor;
+}
+
+// Top input container style
+.input__container--top {
+	@include flexRow();
+	width: 100%;
+	margin-bottom: 5rem;
+}
+
+// Bottom input container style
+.input__container--bottom {
+	width: 100%;
+	@include flexRow();
+}
+
+.input__container {
+	@include flexColumn();
+	align-items: flex-start;
+	width: 47%;
+}
+
+.input__container--message {
+	width: 100%;
+}
+
+label {
+	font-size: $h4;
+	color: $fontLight;
+}
+
+input {
+	border: none;
+	border-bottom: 1px solid rgba($fontLight, 0.5);
+	background: transparent;
+	padding: 8px 0;
+	width: 100%;
+	font-size: $bodyFontSize;
+	color: $fontLight;
+	text-align: left;
+}
+
+// Message div styling
+#msgInput {
+	border-bottom: 1px solid rgba($fontLight, 0.5);
+	margin-bottom: 2rem;
+	padding: 8px 0;
+	width: 100%;
+	min-height: 5rem;
+	color: $fontLight;
+	font-size: $bodyFontSize;
+	text-align: center;
+}
+
+#msgInput:focus {
+	outline: none;
+	border-bottom: 1px solid $highlightText;
+}
+
+input::placeholder {
+	font-size: $bodyFontSize;
+}
+
+input:focus {
+	outline: none;
+	border-bottom: 1px solid $highlightText;
+	background: transparent;
+}
+
+// Form buttons styling
+.form__buttons__container {
+	width: 100%;
+	@include flexRow();
+}
+
+.form__buttons__container button {
+	color: $fontLight;
+	border: 1px solid $fontLight;
+}
+
+.form__buttons__container button:hover {
+	border: 1px solid $highlightText;
+	background: $highlightText;
+}
+
+#clearForm:hover {
+	border: 1px solid crimson;
+	background: crimson;
 }
 
 // Footer styling
@@ -451,6 +579,7 @@ footer {
 	width: 25%;
 }
 
+// Highlight link style
 .highlight__link {
 	color: $highlightText;
 }
@@ -588,13 +717,14 @@ footer {
 	
 	// Header styling
 	header {
-		height: 95vh;
+		height: 100%;
 		background-attachment: scroll;
 	}
 
 	// Title container style
 	.text__container {
-		height: 90%;
+		height: 100%;
+		padding: 1rem;
 		justify-content: center;
 	}
 
@@ -645,6 +775,31 @@ footer {
 		height: 50%;
 		width: 100%;
 		border-radius: 2rem 2rem 0 0;
+	}
+		
+	// Team section styling
+	.team__members__container {
+		width: 100%;
+	}
+
+	// Each individual member
+	.member__container {
+		width: 100%;
+		margin: 1rem 0;
+		padding: 1rem 0;
+	}
+
+	.member__image__container {
+		width: 100%;
+	}
+
+	.member__image__container img {
+		max-width: 12rem;
+		height: 12rem;
+	}
+
+	.member__icons__container {
+		font-size: 4rem;
 	}
 
 	// Footer styling
