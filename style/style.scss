@@ -8,6 +8,7 @@ $backgroundDark: rgb(45, 45, 45);
 $highlightText: rgba(0, 153, 255, 1);
 $opacityOverlay: rgba(0, 0, 0, 0.9);
 $cardBackground: rgb(45, 45, 45);
+$boxShadowColor: rgba(0, 0, 0, 0.1);
 $bodyFontSize: 1rem;
 $h1: 2.5rem;
 $h2: 2rem;
@@ -78,7 +79,6 @@ button {
 // Custom styling for elements
 body {
 	width: 100%;
-	// min-height: 100vh;
 	overflow-x: hidden;
 	color: $fontLight;
 	font-family: $font;
@@ -184,6 +184,7 @@ header {
 	width: 100%;
 	height: 95vh;
 	@include flexColumn();
+	flex-wrap: nowrap;
 }
 
 // Dark header overlay styling
@@ -191,7 +192,7 @@ header {
 	width: 100%;
 	height: 100%;
 	background: black;
-	opacity: 0.8;
+	opacity: 0.5;
 }
 
 // Title container style
@@ -218,6 +219,9 @@ header {
 	width: 15%;
 	height: auto;
 	margin: 1rem;
+	padding: 1rem;
+	background: $fontDark;
+	border-radius: 2rem;
 }
 
 .header__logo__container img {
@@ -259,6 +263,26 @@ section {
 	color: $fontDark;
 }
 
+// Home section--1 styling
+.text__wrapper {
+	width: 45%;
+}
+
+.img__wrapper {
+	width: 50%;
+	position: relative;
+	@include flexRow();
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.img__wrapper img {
+	width: 100%;
+	height: 100%;
+	box-shadow: 10px 10px 20px 1px rgba(45, 45, 45, 0.3);
+	border-radius: 2rem;
+}
+
 // Services section styling
 .section--services {
 	@include flexColumn();
@@ -267,6 +291,7 @@ section {
 .section__title {
 	color: $highlightText;
 	border-bottom: 3px solid $highlightText;
+	margin-bottom: 2rem;
 }
 
 .content__wrapper {
@@ -295,7 +320,7 @@ section {
 }
 
 .card__img__container {
-	height: 20vh;
+	height: 25vh;
 	width: 100%;
 	border-radius: 2rem 2rem 0 0;
 }
@@ -345,24 +370,66 @@ section {
 	color: $fontLight;
 }
 
-// Home section--1 styling
-.text__wrapper {
-	width: 45%;
-}
-
-.img__wrapper {
-	width: 50%;
-	position: relative;
-	@include flexRow();
-	justify-content: flex-end;
-	align-items: flex-end;
-}
-
-.img__wrapper img {
+// Section team styling
+.team__members__container {
 	width: 100%;
-	height: 100%;
-	box-shadow: 10px 10px 20px 1px rgba(45, 45, 45, 0.3);
+	min-height: auto;
+	@include flexColumn();
+	justify-content: center;
+}
+
+.member__container {
+	width: 30%;
+	min-height: 50vh;
+	margin: 1rem;
+	padding: 1rem;
+	@include flexColumn();
+	justify-content: space-around;
+	flex-wrap: nowrap;
+	box-shadow: 0 10px 20px 1px $boxShadowColor;
 	border-radius: 2rem;
+	background: $fontLight;
+	color: $fontDark;
+}
+
+.member__image__container {
+	width: 100%;
+}
+
+.member__image__container img {
+	max-width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+}
+
+.member__name__container {
+	max-width: 100%;
+}
+
+.member__role__container {
+	max-width: 100%;
+}
+
+.member__icons__container {
+	width: 100%;
+	height: auto;
+	@include flexRow();
+	justify-content: space-evenly;
+	align-items: center;
+	color: $fontDark;
+	font-size: 3rem;
+}
+
+.member__icons__container a {
+	color: $fontDark;
+}
+
+.fa-github {
+	color: #3E2C00;
+}
+
+.fa-linkedin {
+	color: #2867B2;
 }
 
 // Footer styling
@@ -371,7 +438,7 @@ footer {
 	bottom: 0;
 	background: $backgroundDark;
 	width: 100%;
-	padding: 3rem 0;
+	padding: 2rem 0;
 	@include flexRow();
 	justify-content: center;
 }
@@ -533,6 +600,7 @@ footer {
 
 	.header__container {
 		@include flexColumn();
+		margin-bottom: 2rem;
 	}
 
 	.header__container--services {

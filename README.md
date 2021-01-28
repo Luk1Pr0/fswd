@@ -1,2 +1,2 @@
-# fswd
-Full Stack Web Developer website
+# Guru Coding
+Guru Coding website
