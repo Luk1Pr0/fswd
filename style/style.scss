@@ -377,7 +377,8 @@ section {
 .team__members__container {
 	width: 100%;
 	min-height: auto;
-	@include flexColumn();
+	// @include flexColumn();
+	@include flexRow();
 	justify-content: center;
 }
 
@@ -469,7 +470,7 @@ section {
 	padding: 4rem 6rem;
 	box-sizing: unset;
 	border-radius: 1rem;
-	background: rgba($fontDark, 0.9);
+	background: rgba($fontDark, 1);
 	box-shadow: 0 10px 10px 1px $boxShadowColor;
 }
 
@@ -800,6 +801,51 @@ footer {
 
 	.member__icons__container {
 		font-size: 4rem;
+	}
+
+	// Contact page styling
+	.social__icons__container {
+		width: 100%;
+	}
+
+	#contactForm {
+		padding: 1rem;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	// Top input container style
+	.input__container--top {
+		margin: 0;
+	}
+
+	// Bottom input container style
+	.input__container--bottom {
+		width: 100%;
+	}
+
+	.input__container {
+		width: 100%;
+	}
+
+	label {
+		font-size: $h4;
+		color: $fontLight;
+	}
+
+	input {
+		margin-bottom: 2rem;
+	}
+
+	// Message div styling
+	#msgInput {
+		min-height: auto;
+		width: 100%;
+	}	
+
+	// Form buttons styling
+	.form__buttons__container {
+		width: 70%;
 	}
 
 	// Footer styling

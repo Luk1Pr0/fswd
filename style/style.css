@@ -523,13 +523,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -693,7 +689,7 @@ section {
   -webkit-box-sizing: unset;
           box-sizing: unset;
   border-radius: 1rem;
-  background: rgba(45, 45, 45, 0.9);
+  background: #2d2d2d;
   -webkit-box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.1);
 }
@@ -1170,6 +1166,38 @@ footer {
   }
   .member__icons__container {
     font-size: 4rem;
+  }
+  .social__icons__container {
+    width: 100%;
+  }
+  #contactForm {
+    padding: 1rem;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .input__container--top {
+    margin: 0;
+  }
+  .input__container--bottom {
+    width: 100%;
+  }
+  .input__container {
+    width: 100%;
+  }
+  label {
+    font-size: 1.3rem;
+    color: #e6e6e6;
+  }
+  input {
+    margin-bottom: 2rem;
+  }
+  #msgInput {
+    min-height: auto;
+    width: 100%;
+  }
+  .form__buttons__container {
+    width: 70%;
   }
   footer {
     -ms-flex-pack: distribute;
