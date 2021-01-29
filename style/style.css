@@ -775,7 +775,7 @@ input {
   min-height: 5rem;
   color: #e6e6e6;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 #msgInput:focus {
