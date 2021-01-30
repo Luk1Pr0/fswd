@@ -399,7 +399,6 @@ section {
 .member__image__container {
 	width: 10rem;
 	height: 10rem;
-	position: relative;
 }
 
 .member__image__container img {
@@ -793,12 +792,15 @@ footer {
 	}
 
 	.member__image__container {
-		width: 100%;
+		width: 10rem;
+		height: 10rem;
 	}
-
+	
 	.member__image__container img {
-		max-width: 12rem;
-		height: 12rem;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 50%;
 	}
 
 	.member__icons__container {
