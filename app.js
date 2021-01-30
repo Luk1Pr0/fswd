@@ -73,4 +73,12 @@ const displayFiltered = (e) => {
 // Event listeners
 navIcon.addEventListener('click', toggleNav);
 window.addEventListener('scroll', showNavMenu);
-filterSelector.addEventListener('change', displayFiltered);
+const checkPageName = () => {
+	if (window.location.pathname.includes('team')) {
+		filterSelector.addEventListener('change', displayFiltered);
+	}
+	return;
+}
+
+// Run on load
+checkPageName();
