@@ -6,7 +6,6 @@ const header = document.querySelector('header');
 // Services page
 const section1 = document.querySelector('.section--1');
 const cardsContainer = document.querySelector('.section--services');
-const cards = document.querySelectorAll('.card__wrapper');
 
 const mobileScreen = 1024;
 

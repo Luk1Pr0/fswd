@@ -187,7 +187,7 @@ nav ul li a:hover {
 header {
 	position: relative;
 	background: $backgroundDark;
-	background: url('../assets/home-page/header.png');
+	background: url('../assets/header.png');
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -321,7 +321,7 @@ section {
 }
 
 .card__wrapper {
-	min-height: 50vh;
+	min-height: 55vh;
 	width: 25%;
 	margin: 1%;
 	border-radius: 2rem;
@@ -377,7 +377,6 @@ section {
 .team__members__container {
 	width: 100%;
 	min-height: auto;
-	// @include flexColumn();
 	@include flexRow();
 	justify-content: center;
 }
@@ -398,12 +397,15 @@ section {
 }
 
 .member__image__container {
-	width: 100%;
+	width: 10rem;
+	height: 10rem;
+	position: relative;
 }
 
 .member__image__container img {
-	max-width: 10rem;
-	height: 10rem;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	border-radius: 50%;
 }
 
