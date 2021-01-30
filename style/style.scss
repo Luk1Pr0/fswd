@@ -331,6 +331,11 @@ section {
 	color: $fontLight;
 	box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.3);
 	overflow: hidden;
+	transition: $smoothTransition;
+}
+
+.card__wrapper:hover {
+	transform: scale(1.1);
 }
 
 .card__img__container {
@@ -374,6 +379,26 @@ section {
 }
 
 // Team section styling
+.filter__input__container {
+	color: $fontDark;
+	@include flexColumn();
+	width: 100%;
+	margin: 1rem;
+}
+
+.filter__input__container label {
+	color: $fontDark;
+	font-size: $h5;
+	margin-bottom: 1rem;
+}
+
+.filter__input__container select {
+	border: 1px solid $fontDark;
+	outline: none;
+	padding: 8px 0;
+	background: transparent;
+}
+
 .team__members__container {
 	width: 100%;
 	min-height: auto;
@@ -591,7 +616,13 @@ footer {
 }
 
 // Hidden class to hide elements with JS
+.no__opacity {
+	opacity: 0;
+	transition: $smoothTransition;
+}
+
 .hidden {
+	transition: $smoothTransition;
 	display: none;
 }
 
@@ -780,6 +811,10 @@ footer {
 	}
 		
 	// Team section styling
+	.filter__input__container {
+		width: auto;
+	}
+
 	.team__members__container {
 		width: 100%;
 	}
@@ -867,7 +902,13 @@ footer {
 	}
 
 	// Hidden class to hide elements
+	.no__opacity {
+		opacity: 0;
+		transition: $smoothTransition;
+	}
+
 	.hidden {
+		transition: $smoothTransition;
 		display: none;
 	}
 }

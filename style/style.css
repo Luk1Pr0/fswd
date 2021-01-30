@@ -460,6 +460,13 @@ section {
   -webkit-box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.card__wrapper:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .card__img__container {
@@ -515,6 +522,40 @@ section {
 .contact__button__container button:hover {
   background: #2d2d2d;
   color: #e6e6e6;
+}
+
+.filter__input__container {
+  color: #2d2d2d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 1rem;
+}
+
+.filter__input__container label {
+  color: #2d2d2d;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.filter__input__container select {
+  border: 1px solid #2d2d2d;
+  outline: none;
+  padding: 8px 0;
+  background: transparent;
 }
 
 .team__members__container {
@@ -876,7 +917,15 @@ footer {
   border-bottom: 1px solid #0099ff;
 }
 
+.no__opacity {
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
 .hidden {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   display: none;
 }
 
@@ -1152,6 +1201,9 @@ footer {
     width: 100%;
     border-radius: 2rem 2rem 0 0;
   }
+  .filter__input__container {
+    width: auto;
+  }
   .team__members__container {
     width: 100%;
   }
@@ -1217,7 +1269,14 @@ footer {
   .footer--right {
     width: 50%;
   }
+  .no__opacity {
+    opacity: 0;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
   .hidden {
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     display: none;
   }
 }
