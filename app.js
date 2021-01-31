@@ -26,6 +26,7 @@ const showNavMenu = () => {
 		const scrollPos = window.pageYOffset;
 		const sectionOffset = section1.getBoundingClientRect().top;
 		const navHeight = navMenu.getBoundingClientRect().height;
+
 		// If scroll pos is more than 1px hide navbar
 		if (scrollPos > 1) {
 			navMenu.classList.add('nav__hidden');
