@@ -45,8 +45,8 @@ button {
   font-size: 1.2rem;
   background: transparent;
   color: #2d2d2d;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   cursor: pointer;
 }
 
@@ -57,6 +57,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 1rem;
   background: #e6e6e6;
+  background: #2d2d2d;
 }
 
 nav {
@@ -79,27 +80,28 @@ nav {
   justify-content: space-between;
   position: fixed;
   z-index: 2;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   -webkit-transform: translateY(0);
           transform: translateY(0);
   background: transparent;
+  opacity: 0;
 }
 
 .nav__hidden {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   padding: 0 3rem;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .nav__sticky {
   position: fixed;
   top: 0;
   z-index: 2;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
   background: #2d2d2d;
@@ -173,8 +175,8 @@ nav ul li {
 
 nav ul li a {
   padding: 1rem;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 nav ul li a:hover {
@@ -200,7 +202,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-height: 95vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,6 +220,9 @@ header {
       flex-wrap: wrap;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-transition: opacity opacity 1s ease;
+  transition: opacity opacity 1s ease;
+  opacity: 0;
 }
 
 .dark__overlay {
@@ -274,6 +279,9 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 2rem;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 
 .header__logo__container {
@@ -293,6 +301,9 @@ header {
 .header__text {
   position: relative;
   left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 
 .highlight__text {
@@ -303,6 +314,9 @@ header {
   width: 100%;
   position: absolute;
   bottom: 1rem;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 
 .fa-sort-down {
@@ -460,8 +474,8 @@ section {
   -webkit-box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .card__wrapper:hover {
@@ -919,13 +933,13 @@ footer {
 
 .no__opacity {
   opacity: 0;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .hidden {
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   display: none;
 }
 
@@ -1013,8 +1027,8 @@ footer {
     padding: 0;
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
   }
   .nav__active {
     display: -webkit-box;
@@ -1122,8 +1136,8 @@ footer {
     cursor: pointer;
   }
   .burger__line {
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
     background: #0099ff;
   }
   .burger__cross .line1 {
@@ -1271,12 +1285,12 @@ footer {
   }
   .no__opacity {
     opacity: 0;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
   }
   .hidden {
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
     display: none;
   }
 }

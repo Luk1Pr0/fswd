@@ -3,6 +3,11 @@ const navIcon = document.getElementById('navIcon');
 const navMenu = document.getElementById('navMenu');
 const header = document.querySelector('header');
 
+// Header
+const headerTitle = document.querySelector('.header__container');
+const headerText = document.querySelector('.header__text');
+const scrollIcon = document.querySelector('.icon__container');
+
 // Services page
 const section1 = document.querySelector('.section--1');
 const cardsContainer = document.querySelector('.section--services');
@@ -71,6 +76,23 @@ const displayFiltered = (e) => {
 	});
 }
 
+// Delay the display of the certain elements
+const delayDisplay = () => {
+	setTimeout(() => {
+		navMenu.style.opacity = '1';
+		header.style.opacity = '1';
+	}, 200);
+	setTimeout(() => {
+		headerTitle.style.opacity = '1';
+	}, 800);
+	setTimeout(() => {
+		headerText.style.opacity = '1';
+	}, 1600);
+	setTimeout(() => {
+		scrollIcon.style.opacity = '1';
+	}, 2400);
+}
+
 // Event listeners
 navIcon.addEventListener('click', toggleNav);
 window.addEventListener('scroll', showNavMenu);
@@ -83,3 +105,4 @@ const checkPageName = () => {
 
 // Run on load
 checkPageName();
+delayDisplay();
