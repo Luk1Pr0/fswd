@@ -84,13 +84,13 @@ const delayDisplay = () => {
 	}, 200);
 	setTimeout(() => {
 		headerTitle.style.opacity = '1';
-	}, 800);
+	}, 600);
 	setTimeout(() => {
 		headerText.style.opacity = '1';
-	}, 1600);
+	}, 1200);
 	setTimeout(() => {
 		scrollIcon.style.opacity = '1';
-	}, 2400);
+	}, 1800);
 }
 
 // Event listeners
