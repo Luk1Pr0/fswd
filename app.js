@@ -16,6 +16,11 @@ const cardsContainer = document.querySelector('.section--services');
 const filterSelector = document.getElementById('filterMembers');
 const members = document.querySelectorAll('.member__container');
 
+// Contact page
+const contactForm = document.getElementById('contactForm');
+const clearFormBtn = document.getElementById('clearForm');
+const msgInput = document.getElementById('msgInput');
+
 const mobileScreen = 1024;
 
 // Close or open nav menu
@@ -93,16 +98,38 @@ const delayDisplay = () => {
 	}, 1800);
 }
 
+// Sending form data to the backend
+const getFormData = (e) => {
+	e.preventDefault();
+}
+
+// Clear form data
+const clearFormData = () => {
+	msgInput.textContent = '';
+}
+
 // Event listeners
 navIcon.addEventListener('click', toggleNav);
 window.addEventListener('scroll', showNavMenu);
-const checkPageName = () => {
+
+const isTeamPage = () => {
+	// If page name includes team then add event listener
 	if (window.location.pathname.includes('team')) {
 		filterSelector.addEventListener('change', displayFiltered);
 	}
 	return;
 }
 
+const isContactPage = () => {
+	// If page name includes contact then add event listener
+	if (window.location.pathname.includes('contact')) {
+		contactForm.addEventListener('submit', getFormData);
+		clearFormBtn.addEventListener('click', clearFormData);
+	}
+	return;
+}
+
 // Run on load
-checkPageName();
 delayDisplay();
+isTeamPage();
+isContactPage();
