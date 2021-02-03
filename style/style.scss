@@ -232,8 +232,9 @@ header {
 	@include flexRow();
 	justify-content: center;
 	margin-bottom: 2rem;
+	transition: all 0.5s ease;
 	opacity: 0;
-	transition: $longTransition;
+	transform: scale(2);
 }
 
 .header__logo__container {
@@ -253,8 +254,9 @@ header {
 .header__text {
 	position: relative;
 	left: 0;
+	transition: all 0.5s ease;
 	opacity: 0;
-	transition: $longTransition;
+	transform: scale(2);
 }
 
 .highlight__text {
@@ -635,6 +637,12 @@ footer {
 .hidden {
 	transition: $smoothTransition;
 	display: none;
+}
+
+// Class to be added on load after a delay
+.resize {
+	transform: scale(1);
+	opacity: 1;
 }
 
 // Animations

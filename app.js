@@ -84,18 +84,18 @@ const displayFiltered = (e) => {
 // Delay the display of the certain elements
 const delayDisplay = () => {
 	setTimeout(() => {
-		navMenu.style.opacity = '1';
 		header.style.opacity = '1';
+		navMenu.style.opacity = '1';
 	}, 200);
 	setTimeout(() => {
-		headerTitle.style.opacity = '1';
+		headerTitle.classList.add('resize');
 	}, 600);
 	setTimeout(() => {
-		headerText.style.opacity = '1';
-	}, 1200);
+		headerText.classList.add('resize');
+	}, 1000);
 	setTimeout(() => {
 		scrollIcon.style.opacity = '1';
-	}, 1800);
+	}, 1400);
 }
 
 // Sending form data to the backend

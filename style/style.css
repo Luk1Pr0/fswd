@@ -279,9 +279,11 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 2rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   opacity: 0;
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 .header__logo__container {
@@ -301,9 +303,11 @@ header {
 .header__text {
   position: relative;
   left: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   opacity: 0;
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 .highlight__text {
@@ -941,6 +945,12 @@ footer {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   display: none;
+}
+
+.resize {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
 }
 
 @-webkit-keyframes scroll {
