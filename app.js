@@ -83,21 +83,26 @@ const displayFiltered = (e) => {
 
 // Delay the display of the certain elements
 const delayDisplay = () => {
+
+	// Show header on load for all pages
 	setTimeout(() => {
 		header.style.opacity = '1';
 		navMenu.style.opacity = '1';
 	}, 200);
-	setTimeout(() => {
-		headerTitle.classList.add('resize');
-	}, 600);
-	setTimeout(() => {
-		headerText.classList.add('resize');
-	}, 1000);
-	setTimeout(() => {
-		scrollIcon.style.opacity = '1';
-	}, 1400);
-}
 
+	// If the page name does not include sitemap then do the below actions
+	if (!window.location.pathname.includes('sitemap')) {
+		setTimeout(() => {
+			headerTitle.classList.add('resize');
+		}, 600);
+		setTimeout(() => {
+			headerText.classList.add('resize');
+		}, 1000);
+		setTimeout(() => {
+			scrollIcon.style.opacity = '1';
+		}, 1400);
+	}
+}
 // Sending form data to the backend
 const getFormData = (e) => {
 	e.preventDefault();
@@ -129,7 +134,16 @@ const isContactPage = () => {
 	return;
 }
 
+const isSitemap = () => {
+	// If page name includes sitemap then add event listener
+	if (window.location.pathname.includes('sitemap')) {
+		window.removeEventListener('scroll', showNavMenu);
+	}
+	return;
+}
+
 // Run on load
 delayDisplay();
 isTeamPage();
 isContactPage();
+isSitemap();

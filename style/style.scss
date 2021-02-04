@@ -300,7 +300,9 @@ header {
 }
 
 .sitemap__hr {
-	width: 100%
+	width: 100%;
+	color: $fontLight;
+	background: $fontLight;
 }
 
 .sitemap ul {
