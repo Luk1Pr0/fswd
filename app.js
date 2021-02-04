@@ -117,33 +117,23 @@ const clearFormData = () => {
 navIcon.addEventListener('click', toggleNav);
 window.addEventListener('scroll', showNavMenu);
 
-const isTeamPage = () => {
-	// If page name includes team then add event listener
+const checkPageName = () => {
 	if (window.location.pathname.includes('team')) {
-		filterSelector.addEventListener('change', displayFiltered);
-	}
-	return;
-}
 
-const isContactPage = () => {
-	// If page name includes contact then add event listener
-	if (window.location.pathname.includes('contact')) {
+		// If page name includes team then add event listener
+		filterSelector.addEventListener('change', displayFiltered);
+	} else if (window.location.pathname.includes('contact')) {
+
+		// If page name includes contact then add event listener
 		contactForm.addEventListener('submit', getFormData);
 		clearFormBtn.addEventListener('click', clearFormData);
-	}
-	return;
-}
+	} else if (window.location.pathname.includes('sitemap')) {
 
-const isSitemap = () => {
-	// If page name includes sitemap then add event listener
-	if (window.location.pathname.includes('sitemap')) {
+		// If page name includes sitemap then add event listener
 		window.removeEventListener('scroll', showNavMenu);
 	}
-	return;
 }
 
 // Run on load
 delayDisplay();
-isTeamPage();
-isContactPage();
-isSitemap();
+checkPageName();
