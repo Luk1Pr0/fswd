@@ -278,6 +278,46 @@ header {
 	color: $highlightText;
 }
 
+// Sitemap styling
+.sitemap {
+	height: 100%;
+	width: 100%;
+	@include flexColumn();
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	padding: 10rem;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.title__container {
+	@include flexRow();
+	width: 100%;
+	margin: 1rem;
+}
+
+.sitemap h1 {
+	margin: 1rem;
+}
+
+.sitemap__hr {
+	width: 100%
+}
+
+.sitemap ul {
+	@include flexRow();
+	justify-content: space-around;
+	width: 100%;
+}
+
+.sitemap ul li {
+	margin: 2rem;
+	font-size: $h4;
+}
+
+.sitemap ul li a:hover {
+	color: $highlightText;
+}
+
 // Section styling
 section {
 	position: relative;
