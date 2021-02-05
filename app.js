@@ -38,8 +38,9 @@ const showNavMenu = () => {
 		const navHeight = navMenu.getBoundingClientRect().height;
 
 		// If scroll pos is more than 1px hide navbar
-		if (scrollPos > 1) {
+		if (scrollPos > 50) {
 			navMenu.classList.add('nav__hidden');
+
 			// Once section offset is less than the navHeight, stick the navbar
 			if (sectionOffset < navHeight * 1.2) {
 				navMenu.classList.add('nav__sticky');
@@ -68,10 +69,12 @@ const displayFiltered = (e) => {
 		if (!role.includes(value)) {
 			member.style.opacity = '0';
 			member.style.transform = 'scale(0)';
+
 			// Don't display the member after 500ms
 			setTimeout(() => member.style.display = 'none', 500);
 		} else {
 			setTimeout(() => member.style.display = 'flex', 500);
+
 			// Display member after the display is set to flex
 			setTimeout(() => {
 				member.style.opacity = '1';
@@ -83,7 +86,6 @@ const displayFiltered = (e) => {
 
 // Delay the display of the certain elements
 const delayDisplay = () => {
-
 	// Show header on load for all pages
 	setTimeout(() => {
 		header.style.opacity = '1';
@@ -117,19 +119,22 @@ const clearFormData = () => {
 navIcon.addEventListener('click', toggleNav);
 window.addEventListener('scroll', showNavMenu);
 
+// Check page name and remove/add event listeners
 const checkPageName = () => {
+
+	// If page name includes team then add event listener
 	if (window.location.pathname.includes('team')) {
-
-		// If page name includes team then add event listener
 		filterSelector.addEventListener('change', displayFiltered);
-	} else if (window.location.pathname.includes('contact')) {
+	}
 
-		// If page name includes contact then add event listener
+	// If page name includes contact then add event listener
+	else if (window.location.pathname.includes('contact')) {
 		contactForm.addEventListener('submit', getFormData);
 		clearFormBtn.addEventListener('click', clearFormData);
-	} else if (window.location.pathname.includes('sitemap')) {
+	}
 
-		// If page name includes sitemap then add event listener
+	// If page name includes sitemap then add event listener
+	else if (window.location.pathname.includes('sitemap')) {
 		window.removeEventListener('scroll', showNavMenu);
 	}
 }
