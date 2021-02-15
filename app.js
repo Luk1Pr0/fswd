@@ -110,11 +110,6 @@ const getFormData = (e) => {
 	// e.preventDefault();
 }
 
-// Clear form data
-const clearFormData = () => {
-	msgInput.textContent = '';
-}
-
 // Event listeners
 navIcon.addEventListener('click', toggleNav);
 window.addEventListener('scroll', showNavMenu);
@@ -130,7 +125,6 @@ const checkPageName = () => {
 	// If page name includes contact then add event listener
 	else if (window.location.pathname.includes('contact')) {
 		contactForm.addEventListener('submit', getFormData);
-		// clearFormBtn.addEventListener('click', clearFormData);
 	}
 
 	// If page name includes sitemap then add event listener

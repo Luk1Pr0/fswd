@@ -809,8 +809,9 @@ section {
   align-items: center;
 }
 
-#contactForm {
-  width: 50%;
+form {
+  width: 70%;
+  background: #2d2d2d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -826,16 +827,16 @@ section {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 4rem 6rem;
-  -webkit-box-sizing: unset;
-          box-sizing: unset;
-  border-radius: 1rem;
-  background: #2d2d2d;
-  -webkit-box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 7rem;
+  -webkit-box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.1);
 }
 
 .input__container--top {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -847,23 +848,8 @@ section {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  justify-content: space-between;
   margin-bottom: 5rem;
-}
-
-.input__container--bottom {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .input__container {
@@ -885,93 +871,93 @@ section {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 47%;
+  width: 40%;
+}
+
+label {
+  color: #e6e6e6;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.input__container input {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  color: #e6e6e6;
+  padding: 7px 0;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #0099ff;
+}
+
+.input__container--bottom {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 5rem;
 }
 
 .input__container--message {
   width: 100%;
-}
-
-label {
-  font-size: 1.3rem;
-  color: #e6e6e6;
-}
-
-input {
-  border: none;
-  border-bottom: 1px solid rgba(230, 230, 230, 0.5);
-  background: transparent;
-  padding: 8px 0;
-  width: 100%;
-  font-size: 1rem;
-  color: #e6e6e6;
-  text-align: left;
-}
-
-#msgInput {
-  border-bottom: 1px solid rgba(230, 230, 230, 0.5);
-  margin-bottom: 2rem;
-  padding: 8px 0;
-  width: 100%;
-  min-height: 5rem;
-  color: #e6e6e6;
-  font-size: 1rem;
-  text-align: left;
-}
-
-#msgInput:focus {
-  outline: none;
-  border-bottom: 1px solid #0099ff;
-}
-
-input::-webkit-input-placeholder {
-  font-size: 1rem;
-}
-
-input:-ms-input-placeholder {
-  font-size: 1rem;
-}
-
-input::-ms-input-placeholder {
-  font-size: 1rem;
-}
-
-input::placeholder {
-  font-size: 1rem;
-}
-
-input:focus {
-  outline: none;
-  border-bottom: 1px solid #0099ff;
-  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 textarea {
-  background: transparent;
-  outline: none;
-  color: #e6e6e6;
-  width: 100%;
+  min-width: 100%;
   max-width: 100%;
-  min-height: 5rem;
-}
-
-textarea::-webkit-input-placeholder {
+  min-height: 10vh;
+  max-height: 30vh;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid #e6e6e6;
+  text-align: left;
   color: #e6e6e6;
 }
 
-textarea:-ms-input-placeholder {
-  color: #e6e6e6;
+textarea:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #0099ff;
 }
 
-textarea::-ms-input-placeholder {
-  color: #e6e6e6;
-}
-
-textarea::placeholder {
-  color: #e6e6e6;
-}
-
-.form__buttons__container {
+.button__container__wrapper {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -984,21 +970,35 @@ textarea::placeholder {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.form__buttons__container button {
+.button__container button {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   color: #e6e6e6;
-  border: 1px solid #e6e6e6;
+  padding: 10px 20px;
 }
 
-.form__buttons__container button:hover {
-  border: 1px solid #0099ff;
-  background: #0099ff;
+.button--green {
+  background: transparent;
+  border: 1px solid limegreen;
 }
 
-#clearForm:hover {
+.button--green:hover {
+  background: limegreen;
+  color: #2d2d2d;
+}
+
+.button--red {
+  background: transparent;
   border: 1px solid crimson;
+}
+
+.button--red:hover {
   background: crimson;
+  color: #2d2d2d;
 }
 
 footer {
@@ -1357,34 +1357,27 @@ footer {
   .social__icons__container {
     width: 100%;
   }
-  #contactForm {
-    padding: 1rem;
+  form {
     width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    padding: 2rem;
   }
   .input__container--top {
-    margin: 0;
-  }
-  .input__container--bottom {
-    width: 100%;
+    margin-bottom: 0;
   }
   .input__container {
     width: 100%;
-  }
-  label {
-    font-size: 1.3rem;
-    color: #e6e6e6;
-  }
-  input {
     margin-bottom: 2rem;
   }
-  #msgInput {
-    min-height: auto;
-    width: 100%;
+  .input__container--bottom {
+    margin-bottom: 2rem;
   }
-  .form__buttons__container {
-    width: 70%;
+  textarea {
+    min-height: 5vh;
+  }
+  .button__container__wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   footer {
     -ms-flex-pack: distribute;

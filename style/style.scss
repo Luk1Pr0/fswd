@@ -17,6 +17,7 @@ $h4: 1.3rem;
 $h5: 1.2rem;
 $font: 'Rubik', sans-serif;
 $smoothTransition: 0.5s ease;
+$shortTransition: 0.3s ease;
 $longTransition: opacity 1s ease;
 
 // Mixins
@@ -537,6 +538,7 @@ section {
 	color: rgb(29,161,242);
 }
 
+// Form containe style
 .contact__form__container {
 	width: 100%;
 	height: auto;
@@ -545,114 +547,122 @@ section {
 	align-items: center;
 }
 
-#contactForm {
-	width: 50%;
+// Contact form style
+form {
+	width: 70%;
+	background: $fontDark;
 	@include flexColumn();
-	padding: 4rem 6rem;
-	box-sizing: unset;
-	border-radius: 1rem;
-	background: rgba($fontDark, 1);
-	box-shadow: 0 10px 10px 1px $boxShadowColor;
+	justify-content: flex-start;
+	padding: 7rem;
+	box-shadow: 0 10px 20px 1px $boxShadowColor;
 }
 
 // Top input container style
 .input__container--top {
-	@include flexRow();
 	width: 100%;
+	@include flexRow();
+	justify-content: space-between;
 	margin-bottom: 5rem;
 }
 
-// Bottom input container style
-.input__container--bottom {
-	width: 100%;
-	@include flexRow();
-}
-
+// Input container style
 .input__container {
 	@include flexColumn();
 	align-items: flex-start;
-	width: 47%;
-}
-
-.input__container--message {
-	width: 100%;
+	width: 40%;
 }
 
 label {
+	color: $fontLight;
 	font-size: $h4;
-	color: $fontLight;
+	margin-bottom: 1rem;
 }
 
-input {
+// Input container input style
+.input__container input {
+	background: none;
 	border: none;
-	border-bottom: 1px solid rgba($fontLight, 0.5);
-	background: transparent;
-	padding: 8px 0;
 	width: 100%;
-	font-size: $bodyFontSize;
-	color: $fontLight;
 	text-align: left;
-}
-
-// Message div styling
-#msgInput {
-	border-bottom: 1px solid rgba($fontLight, 0.5);
-	margin-bottom: 2rem;
-	padding: 8px 0;
-	width: 100%;
-	min-height: 5rem;
 	color: $fontLight;
-	font-size: $bodyFontSize;
-	text-align: left;
-}
-
-#msgInput:focus {
-	outline: none;
-	border-bottom: 1px solid $highlightText;
-}
-
-input::placeholder {
-	font-size: $bodyFontSize;
+	padding: 7px 0;
+	border-bottom: 2px solid $fontLight;
 }
 
 input:focus {
+	border: none;
+	outline: none;
+	border-bottom: 2px solid $highlightText;
+}
+
+// Input container bottom style
+.input__container--bottom {
+	width: 100%;
+	@include flexColumn();
+	margin-bottom: 5rem;
+}
+
+// Input container message style
+.input__container--message {
+	width: 100%;
+	@include flexColumn();
+	align-items: flex-start;
+}
+
+// Text area style
+textarea {
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 10vh;
+	max-height: 30vh;
+	border: none;
+	outline: none;
+	background: transparent;
+	border-bottom: 1px solid $fontLight;
+	text-align: left;
+	color: $fontLight;
+}
+
+textarea:focus {
+	border: none;
 	outline: none;
 	border-bottom: 1px solid $highlightText;
-	background: transparent;
 }
 
-textarea {
-	background: transparent;
-	outline: none;
-	color: $fontLight;
-	width: 100%;
-	max-width: 100%;
-	min-height: 5rem;
-}
-
-textarea::placeholder {
-	color: $fontLight;
-}
-
-// Form buttons styling
-.form__buttons__container {
+// Form buttons container style
+.button__container__wrapper {
 	width: 100%;
 	@include flexRow();
+	justify-content: space-around;
 }
 
-.form__buttons__container button {
+// Button container button style
+.button__container button {
+	transition: $shortTransition;
 	color: $fontLight;
-	border: 1px solid $fontLight;
+	padding: 10px 20px;
 }
 
-.form__buttons__container button:hover {
-	border: 1px solid $highlightText;
-	background: $highlightText;
+// Green button style
+.button--green {
+	background: transparent;
+	border: 1px solid limegreen;
 }
 
-#clearForm:hover {
+.button--green:hover {
+	background: limegreen;
+	color: $fontDark;
+}
+
+// Red button style
+.button--red {
+	background: transparent;
 	border: 1px solid crimson;
+}
+
+.button--red:hover {
 	background: crimson;
+	color: $fontDark;
 }
 
 // Footer styling
@@ -921,44 +931,36 @@ footer {
 		width: 100%;
 	}
 
-	#contactForm {
-		padding: 1rem;
+	// Contact form style
+	form {
 		width: 100%;
-		box-sizing: border-box;
+		padding: 2rem;
 	}
 
 	// Top input container style
 	.input__container--top {
-		margin: 0;
+		margin-bottom: 0;
 	}
 
-	// Bottom input container style
-	.input__container--bottom {
-		width: 100%;
-	}
-
+	// Input container style
 	.input__container {
 		width: 100%;
-	}
-
-	label {
-		font-size: $h4;
-		color: $fontLight;
-	}
-
-	input {
 		margin-bottom: 2rem;
 	}
 
-	// Message div styling
-	#msgInput {
-		min-height: auto;
-		width: 100%;
-	}	
+	// Input container bottom style
+	.input__container--bottom {
+		margin-bottom: 2rem;
+	}
 
-	// Form buttons styling
-	.form__buttons__container {
-		width: 70%;
+	// Text area style
+	textarea {
+		min-height: 5vh;
+	}
+
+	// Form buttons container style
+	.button__container__wrapper {
+		justify-content: space-between;
 	}
 
 	// Footer styling
