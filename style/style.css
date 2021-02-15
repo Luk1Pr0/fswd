@@ -946,6 +946,31 @@ input:focus {
   background: transparent;
 }
 
+textarea {
+  background: transparent;
+  outline: none;
+  color: #e6e6e6;
+  width: 100%;
+  max-width: 100%;
+  min-height: 5rem;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #e6e6e6;
+}
+
+textarea:-ms-input-placeholder {
+  color: #e6e6e6;
+}
+
+textarea::-ms-input-placeholder {
+  color: #e6e6e6;
+}
+
+textarea::placeholder {
+  color: #e6e6e6;
+}
+
 .form__buttons__container {
   width: 100%;
   display: -webkit-box;

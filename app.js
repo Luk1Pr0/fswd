@@ -107,7 +107,7 @@ const delayDisplay = () => {
 }
 // Sending form data to the backend
 const getFormData = (e) => {
-	e.preventDefault();
+	// e.preventDefault();
 }
 
 // Clear form data
@@ -130,7 +130,7 @@ const checkPageName = () => {
 	// If page name includes contact then add event listener
 	else if (window.location.pathname.includes('contact')) {
 		contactForm.addEventListener('submit', getFormData);
-		clearFormBtn.addEventListener('click', clearFormData);
+		// clearFormBtn.addEventListener('click', clearFormData);
 	}
 
 	// If page name includes sitemap then add event listener

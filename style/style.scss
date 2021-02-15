@@ -621,6 +621,19 @@ input:focus {
 	background: transparent;
 }
 
+textarea {
+	background: transparent;
+	outline: none;
+	color: $fontLight;
+	width: 100%;
+	max-width: 100%;
+	min-height: 5rem;
+}
+
+textarea::placeholder {
+	color: $fontLight;
+}
+
 // Form buttons styling
 .form__buttons__container {
 	width: 100%;
