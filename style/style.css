@@ -286,6 +286,10 @@ header {
           transform: scale(2);
 }
 
+.logo__title {
+  font-size: 3rem;
+}
+
 .header__logo__container {
   width: 15%;
   height: auto;
@@ -312,6 +316,10 @@ header {
 
 .highlight__text {
   color: #0099ff;
+}
+
+.small__header {
+  font-size: 2rem;
 }
 
 .icon__container {

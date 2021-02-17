@@ -226,7 +226,7 @@ header {
 .highlight__title {
 	color: $highlightText;
 	border-bottom: 4px solid $highlightText;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
 .header__container {
@@ -236,6 +236,10 @@ header {
 	transition: all 0.5s ease;
 	opacity: 0;
 	transform: scale(2);
+}
+
+.logo__title {
+	font-size: 3rem;
 }
 
 .header__logo__container {
@@ -262,6 +266,10 @@ header {
 
 .highlight__text {
 	color: $highlightText;
+}
+
+.small__header {
+	font-size: $h2;
 }
 
 .icon__container {
