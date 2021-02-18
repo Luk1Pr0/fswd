@@ -377,6 +377,22 @@ section {
 	width: 90%;
 }
 
+.content__wrapper--team {
+	@include flexRow();
+	width: 90%;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin: 1rem 0;
+}
+
+.content--left {
+	width: 40%;
+}
+
+.content--right {
+	width: 40%;
+}
+
 .card__container {
 	width: 100%;
 	min-height: 50vh;
@@ -682,6 +698,7 @@ footer {
 	padding: 2rem 0;
 	@include flexRow();
 	justify-content: center;
+	align-items: flex-start;
 }
 
 .footer--left {
@@ -874,6 +891,20 @@ footer {
 	}
 
 	.content__wrapper {
+		width: 100%;
+	}
+
+	.content__wrapper--team {
+		@include flexColumn();
+		width: 100%;
+	}
+
+	.content--left {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	.content--right {
 		width: 100%;
 	}
 
